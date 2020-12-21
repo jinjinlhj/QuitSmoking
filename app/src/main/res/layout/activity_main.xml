@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/colorBack"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- today 이미지 -->
+            <ImageView
+                android:layout_width="182dp"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/today"/>
+            <Button
+                android:id="@+id/btnSendData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="전송"
+                android:layout_gravity="center_horizontal"/>
+            <!-- 담배개피 개수 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/today_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="5"
+                    android:layout_marginRight="5dp"
+                    android:textColor="#9457A5"
+                    android:textSize="45dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:text="/"
+                    android:textSize="20dp"
+                    android:textColor="#9457A5" />
+
+                <TextView
+                    android:id="@+id/limit_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:text="10"
+                    android:textSize="20dp"
+                    android:textColor="#9457A5" />
+            </LinearLayout>
+        </LinearLayout>
+        <!-- 현재 진행률 프로그레스 바 -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="220dp"
+                android:layout_height="220dp"
+                android:layout_centerInParent="true"
+                android:indeterminate="false"
+                android:progress="100"
+                android:progressDrawable="@drawable/progress_back"/>
+            <ProgressBar
+                android:id="@+id/cpb"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="220dp"
+                android:layout_height="220dp"
+                android:layout_centerInParent="true"
+                android:indeterminate="false"
+                android:progress="25"
+                android:progressDrawable="@drawable/progress_bar"/>
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="260dp"
+                android:layout_height="260dp"
+                android:layout_centerInParent="true"
+                android:indeterminate="false"
+                android:progress="100"
+                android:progressDrawable="@drawable/progress_back2"/>
+            <ProgressBar
+                android:id="@+id/cpb2"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="260dp"
+                android:layout_height="260dp"
+                android:layout_centerInParent="true"
+                android:indeterminate="false"
+                android:progress="50"
+                android:progressDrawable="@drawable/progress_bar2" />
+            <!-- 진행률 표시-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="70dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="진행률"
+                    android:textColor="#d79bbb"
+                    android:textSize="20dp"/>
+                <TextView
+                    android:id="@+id/today_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="25%"
+                    android:textSize="55dp"
+                    android:textStyle="bold"
+                    android:textColor="#fff"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <!-- 시간 절약-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center_horizontal">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <RelativeLayout
+                    android:layout_width="140dp"
+                    android:layout_height="85dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/round_background">
+                    <LinearLayout
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="37dp"
+                            android:layout_height="44dp"
+                            android:src="@drawable/watch"
+                            android:layout_gravity="center_horizontal"/>
+                        <TextView
+                            android:id="@+id/save_Time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0시간 0분 0초"
+                            android:layout_gravity="center"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="시간절약"
+                            android:layout_gravity="center" />
+                    </LinearLayout>
+                </RelativeLayout>
+                <!-- 돈 절약-->
+                <RelativeLayout
+                    android:layout_width="140dp"
+                    android:layout_height="85dp"
+                    android:background="@drawable/round_background2">
+                    <LinearLayout
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="37dp"
+                            android:layout_height="44dp"
+                            android:src="@drawable/money2"
+                            android:layout_gravity="center_horizontal" />
+                        <TextView
+                            android:id="@+id/save_money"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0원"
+                            android:layout_gravity="center" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="돈절약"
+                            android:layout_gravity="center" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+        <Button
+            android:id="@+id/button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="Button"
+            android:layout_gravity="center_horizontal"
+            android:visibility="invisible"
+            tools:ignore="InvalidId" />
+        <!--arc Menu-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="35dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical">
+                <com.fangxu.allangleexpandablebutton.AllAngleExpandableButton
+                    android:id="@+id/arc_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/button1"
+                    app:aebAnimDurationMillis="175"
+                    app:aebButtonElevation="0dp"
+                    app:aebButtonGapDp="80dp"
+                    app:aebEndAngleDegree="180"
+                    app:aebIsSelectionMode="false"
+                    app:aebMainButtonSizeDp="45dp"
+                    app:aebRippleEffect="true"
+                    app:aebStartAngleDegree="0"
+                    app:aebSubButtonSizeDp="40dp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

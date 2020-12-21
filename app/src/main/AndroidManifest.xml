@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.quitsmocking">
+
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 블루투스 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" /> <!-- 위치기반 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:name="com.example.quitsmocking.MydayCount"
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppThemeMain"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name="com.example.quitsmocking.NoticeActivity"/>
+        <activity android:name="com.example.quitsmocking.SettingActivity" />
+        <activity android:name="com.example.quitsmocking.TrophyActivity" />
+        <activity android:name="com.example.quitsmocking.GraphActivity" />
+        <activity android:name="com.example.quitsmocking.CalendarActivity" />
+        <activity
+            android:name="com.example.quitsmocking.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTeme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.quitsmocking.MainActivity"
+            android:theme="@style/AppThemeMain" />
+        <activity android:name="com.example.quitsmocking.ProfileActivity" />
+        <activity
+            android:name="com.example.quitsmocking.ResisterActivity"
+            android:theme="@style/AppThemeLogin" />
+        <activity
+            android:name="com.example.quitsmocking.LoginActivity"
+            android:theme="@style/AppThemeLogin" />
+        <activity android:name="com.example.quitsmocking.VersionActivity" />
+
+        <receiver
+            android:name="com.example.quitsmocking.AlarmReceiver"
+            android:enabled="true"
+            android:exported="true"></receiver>
+    </application>
+
+</manifest>

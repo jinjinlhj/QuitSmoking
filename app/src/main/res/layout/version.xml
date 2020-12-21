@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@color/colorBack">
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logo"
+        android:layout_marginTop="150dp"
+        />
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="현재 최신버전입니다."
+       android:textSize="20dp"
+       android:gravity="center_horizontal"
+       android:textColor="#ffffff"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="현재 버전 1.0.0"
+        android:textSize="13dp"
+        android:layout_marginTop="100dp"
+        android:gravity="center_horizontal"
+        android:textColor="#EAEAEA"/>
+
+</LinearLayout>
